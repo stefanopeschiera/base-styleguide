@@ -1,0 +1,232 @@
+@import "normalize";
+@import "compass/css3/box-sizing";
+
+
+// Grid Variables
+$column-count: 12;
+$gutter: 1em;
+
+
+// Colours Variables
+$base-color: #69bc93;
+$secondary-color: #f3f3f3;
+$text-color: #636363;
+
+
+// Typography Variables.
+$text-color: #333;
+$link-color: #0f82bd;
+$hr-color: #ccc;
+$muted-text-color: lighten($text-color, 30%);
+
+$baseline: 1.5em;
+
+$body-font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+// Based on http://type-scale.com/
+$h1-size: 3.998em;
+$h2-size: 2.827em;
+$h3-size: 1.999em;
+$h4-size: 1.414em;
+$h5-size: 1em;
+$h6-size: .707em;
+
+
+// Button Variables.
+$btn-roundness: 3px;
+
+$btn-small-font-size: .75em;
+$btn-large-font-size: 2em;
+
+$btn-default-bg: #dde2d4;
+$btn-default-text-color: #333;
+
+$btn-primary-bg: #0f82bd;
+$btn-primary-text-color: lighten(#0f82bd, 50%);
+
+
+// Form Variables.
+$field-border-color: #ccc;
+$field-error-color: red;
+$field-required-color: red;
+
+
+// Icon Variables.
+$icon-roundness: 3px;
+$icon-border-color: #ccc;
+
+
+// Feedback Variables.
+$information-color: #439ccf;
+$error-color: #e72915;
+$warning-color: #d35400;
+$success-color: #74a730;
+
+
+// Navigation Variables.
+$navbar-link-color: $text-color;
+$navbar-submenu-bg: #dde2e4;
+
+
+// Tabs Variables.
+$tabs-border-color: #ccc;
+$tabs-inactive-bg-color: #c1cacd;
+$tabs-active-bg-color: #fff;
+
+
+// Accordion Variables.
+$accordion-border-color: #ccc;
+$accordion-inactive-bg-color: #c1cacd;
+$accordion-active-bg-color: #333;
+$accordion-active-text-color: #fff;
+
+
+// Box sizing setting
+*, *:after, *:before {
+  
+	@include box-sizing(border-box);
+
+}
+
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix, .cf {
+
+  	zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+
+}
+
+
+// Make images responsive
+img {
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+/* /////////////////////////////////////
+
+TYPOGRAPHY
+
+///////////////////////////////////// */
+
+
+html {
+
+	font-size: 1em;
+
+}
+
+html,
+input,
+button,
+textarea {
+
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+}
+
+body {
+
+	color: $text-color;
+	font-family: $body-font-family;
+	line-height: $baseline;
+
+}
+
+p {
+	margin-bottom: $baseline;
+}
+
+a,
+a:visited {
+
+	color: $link-color;
+
+	&:hover {
+		color: $text-color;
+	}
+
+}
+
+hr {
+
+	border: 0;
+
+	background-color: $hr-color;
+
+	height: 1px;
+	margin: $baseline 0;
+
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+
+	margin: $baseline 0 .5em;
+	line-height: 1.2;
+
+}
+
+h5,
+h6 {
+
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+}
+
+h1 {
+	font-size: $h1-size;
+}
+
+h2 {
+	font-size: $h2-size;
+}
+
+h3 {
+	font-size: $h3-size;
+}
+
+h4 {
+	font-size: $h4-size;
+}
+
+h5 {
+	font-size: $h5-size;
+}
+
+h6 {
+	font-size: $h6-size;
+}
+
+ul,
+ol {
+	margin: 0 0 $baseline $baseline;
+}
+
+blockquote {
+
+	color: $muted-text-color;
+	font-style: italic;
+
+	margin-left: $baseline;
+
+	footer {
+
+		@extend small;
+		font-style: normal;
+
+	}
+
+}
