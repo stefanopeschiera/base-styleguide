@@ -346,12 +346,21 @@ blockquote footer {
   font-style: normal;
 }
 
-/* Main Container. */
 .l-container {
-  width: 95%;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
+.l-header {
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 1140px) {
+  .l-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
 /* The Columns. */
 [class^="col-"] {
   float: left;
@@ -971,6 +980,34 @@ CAROUSEL
   text-align: center;
 }
 
+/* /////////////////////////////////////
+
+BOX
+
+///////////////////////////////////// */
+.box {
+  margin-bottom: 2.25em;
+  overflow: hidden;
+  border: 1px solid #DDDDDD;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.box-content {
+  padding: 2em;
+}
+
+.box-title {
+  margin: 0px;
+}
+
+/* /////////////////////////////////////
+
+THEME
+
+///////////////////////////////////// */
 .theme-styleguide-col {
   margin: .5em 0;
   padding: 1em;
