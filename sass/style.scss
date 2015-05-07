@@ -1,15 +1,48 @@
-@import
-"base/base",
-"base/typography",
-"layout/layout",
-"layout/grid",
-"module/buttons",
-"module/forms",
-"module/icons",
-"module/feedback",
-"module/navigation",
-"module/tabs",
-"module/accordion",
-"module/carousel",
-"module/box",
-"theme/theme"
+/**
+ * ----------------------------------------------------------------------------------------
+ * style.scss
+ *
+ * Simple CSS framework made for Tuts+.
+ *
+ * Author: Adi Purdila
+ *
+ * This framework is inspired by Jonathan Path's framework.
+ * Many thanks!
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * ----------------------------------------------------------------------------------------
+ */
+
+/* Compass */
+@import "compass";
+
+/* Utilities */
+@import "utilities/settings";
+@import "utilities/utilities";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+@import "base/ie8";
+
+/* Fonts */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+@import url("http://fonts.googleapis.com/css?family=Dosis:400,700");
+@import "fonts/font-awesome";
+
+/* Layout */
+@import "layout/grid";
+@import "layout/layout";
+
+/* Modules */
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/icons";
+@import "modules/feedback";
+@import "modules/navigation";
+@import "modules/tabs";
+@import "modules/accordion";
+@import "modules/carousel";
+@import "modules/box";
+
+/* Theme */
+@import "theme/theme";

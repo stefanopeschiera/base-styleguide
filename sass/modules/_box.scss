@@ -1,28 +1,29 @@
 /**
  * ----------------------------------------------------------------------------------------
- * Layout
+ * Box styles.
  * ----------------------------------------------------------------------------------------
  */
 
-.l-container {
-	
-	max-width: 1140px;
-	margin: 0 auto;
+.box {
 
-}
+	margin-bottom: $baseline * 1.5;
+	overflow: hidden;
 
-.l-header {
+	border: 1px solid #DDDDDD;
+	@include border-radius(4px);
 
 	background-color: #FFFFFF;
 
 }
 
+.box-content {
 
-@media (max-width: 1140px) {
-	
-	.l-container {
-  		padding-left: 4%;
-  		padding-right: 4%;
-	}
+	padding: 2em;
+
+}
+
+.box-title {
+
+	margin: 0px;
 
 }
